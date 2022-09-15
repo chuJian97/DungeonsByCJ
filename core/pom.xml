@@ -108,6 +108,12 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.10.10</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.black_ixx</groupId>
             <artifactId>BossShop</artifactId>
             <version>2.7.5</version>
@@ -117,12 +123,6 @@
             <groupId>com.griefcraft</groupId>
             <artifactId>Modern-LWC</artifactId>
             <version>2.1.2</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>me.clip</groupId>
-            <artifactId>placeholderapi</artifactId>
-            <version>2.10.10</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -150,7 +150,7 @@
         </repository>
         <repository>
             <id>alessiodp-repo</id>
-            <url>https://repo.alessiodp.com/releases/</url>
+            <url>https://repo.alessiodp.com/#/releases/</url>
         </repository>
     </repositories>
 </project>

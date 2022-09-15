@@ -10,4 +10,5 @@ commands:
   dungeonsxl:
     description: Reference command for DungeonsXL.
     aliases: [dxl,dungeon]
+#    aliases: [dbcj]
 api-version: 1.13

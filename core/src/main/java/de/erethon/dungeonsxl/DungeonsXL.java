@@ -224,7 +224,7 @@ public class DungeonsXL extends DREPlugin implements DungeonsAPI {
                 .internals(Internals.andHigher(Internals.v1_8_R1))
                 .economy(true)
                 .permissions(true)
-                .metrics(true)
+                .metrics(false)
                 .spigotMCResourceId(9488)
                 .bStatsResourceId(1039)
                 .versionComparator(VersionComparator.EQUAL)
