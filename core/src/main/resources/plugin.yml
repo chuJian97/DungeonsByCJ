@@ -9,6 +9,6 @@ softdepend: [CommandsXL, ItemsXL, Vault, Citizens, CustomMobs, InsaneMobs, Mythi
 commands:
   dungeonsxl:
     description: Reference command for DungeonsXL.
-    aliases: [dxl,dungeon]
+    aliases: [dcj,dungeon]
 #    aliases: [dbcj]
 api-version: 1.13

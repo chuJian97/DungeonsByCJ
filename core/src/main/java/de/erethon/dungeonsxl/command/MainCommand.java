@@ -69,13 +69,13 @@ public class MainCommand extends DCommand {
 //        MessageUtil.sendCenteredMessage(sender, "&4" + D[3] + "&f" + X[3] + L[3]);
 //        MessageUtil.sendCenteredMessage(sender, "&4" + D[4] + "&f" + X[4] + L[4]);
 //        MessageUtil.sendCenteredMessage(sender, "&b&l###### " + DMessage.CMD_MAIN_WELCOME.getMessage() + "&7 v" + plugin.getDescription().getVersion() + " &b&l######");
-        MessageUtil.sendCenteredMessage(sender, "&b&l###### 欢迎使用鱼乐附属副本插件 DungeonsByCJ V0.1-DEV ######");
-//        MessageUtil.sendCenteredMessage(sender, DMessage.CMD_MAIN_LOADED.getMessage(String.valueOf(maps), String.valueOf(dungeons), String.valueOf(loaded), String.valueOf(players)));
+//        MessageUtil.sendCenteredMessage(sender, "&b&l###### 欢迎使用鱼乐附属副本插件 DungeonsByCJ V0.1-DEV ######");
+        MessageUtil.sendCenteredMessage(sender, DMessage.CMD_MAIN_LOADED.getMessage(String.valueOf(maps), String.valueOf(dungeons), String.valueOf(loaded), String.valueOf(players)));
         MessageUtil.sendCenteredMessage(sender, DMessage.CMD_MAIN_LOADED.getMessage(String.valueOf(maps), String.valueOf(dungeons), String.valueOf(loaded), String.valueOf(players)));
         MessageUtil.sendCenteredMessage(sender, DMessage.CMD_MAIN_COMPATIBILITY.getMessage(String.valueOf(internals), vault, itemsxl));
-//        MessageUtil.sendCenteredMessage(sender, DMessage.CMD_MAIN_HELP_INFO.getMessage());
+        MessageUtil.sendCenteredMessage(sender, DMessage.CMD_MAIN_HELP_INFO.getMessage());
 //        MessageUtil.sendCenteredMessage(sender, "&7\u00a92012-2021 Frank Baumann & contributors; lcsd. under GPLv3.");
-        MessageUtil.sendCenteredMessage(sender, "&7可以使用 /dbcj help & /DungeonsByCJ help 获取更多指令帮助");
+//        MessageUtil.sendCenteredMessage(sender, "&7可以使用 /dbcj help & /DungeonsByCJ help 获取更多指令帮助");
     }
 
 }

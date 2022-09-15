@@ -58,13 +58,13 @@ public class StatusCommand extends DCommand {
 
         String internalsVersionCorrect = getSymbol(plugin.getSettings().getInternals().contains(compat.getInternals()));
         String dungeonsxlVersionCorrect = getSymbol(!dungeonsxlVersion.contains("SNAPSHOT"));
-
-        MessageUtil.sendCenteredMessage(sender, "&4&l=> &6STATUS &4&l<=");
+//TODO STATUS
+        MessageUtil.sendCenteredMessage(sender, "&4&l=> &6插件状态 &4&l<=");
         MessageUtil.sendMessage(sender, ChatColor.GRAY + "Version info:");
         MessageUtil.sendMessage(sender, "= Minecraft: " + minecraftVersion + " " + internalsVersionCorrect);
         MessageUtil.sendMessage(sender, "= Bukkit: " + bukkitVersion + " " + internalsVersionCorrect);
         MessageUtil.sendMessage(sender, "= Internals (package version): " + internalsVersion + " " + internalsVersionCorrect);
-        MessageUtil.sendMessage(sender, "= DungeonsXL: " + dungeonsxlVersion + " " + dungeonsxlVersionCorrect);
+        MessageUtil.sendMessage(sender, "= DungeonsByCJ: " + dungeonsxlVersion + " " + dungeonsxlVersionCorrect);
 
         Plugin vault = manager.getPlugin("Vault");
         Plugin itemsxl = manager.getPlugin("ItemsXL");
@@ -118,7 +118,7 @@ public class StatusCommand extends DCommand {
         String mythicmobsVersionCorrect = getSymbol(mythicmobsVersion.startsWith("4."));
         String holographicdisplaysVersionCorrect = getSymbol(holographicdisplaysVersion.startsWith("2.4"));
 
-        MessageUtil.sendMessage(sender, ChatColor.GRAY + "Dependency info:");
+        MessageUtil.sendMessage(sender, ChatColor.GRAY + "依赖信息:");
         MessageUtil.sendMessage(sender, "= Vault: " + vaultVersion + " " + vaultVersionCorrect);
         MessageUtil.sendMessage(sender, "  = Permissions: " + permissionPlugin + " " + permissionPluginCorrect);
         MessageUtil.sendMessage(sender, "  = Economy: " + economyPlugin + " " + economyPluginCorrect);
