@@ -5,10 +5,10 @@
  */
 package de.erethon.dungeonsxxl.sign;
 
-import de.erethon.dungeonsxl.api.DungeonsAPI;
-import de.erethon.dungeonsxl.api.sign.Button;
-import de.erethon.dungeonsxl.api.world.InstanceWorld;
-import de.erethon.dungeonsxl.player.DPermission;
+import com.chujian.dungeonsByCJ.api.DungeonsAPI;
+import com.chujian.dungeonsByCJ.api.sign.Button;
+import com.chujian.dungeonsByCJ.api.world.InstanceWorld;
+import com.chujian.dungeonsByCJ.player.DPermission;
 import de.erethon.dungeonsxxl.util.FireworkUtil;
 import org.bukkit.block.Sign;
 

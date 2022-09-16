@@ -1,0 +1,129 @@
+/*
+ * Copyright (C) 2012-2021 Frank Baumann
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+package com.chujian.dungeonsByCJ.command;
+
+import com.chujian.dungeonsByCJ.dungeon.DDungeon;
+import com.chujian.dungeonsByCJ.dungeon.DungeonConfig;
+import com.chujian.dungeonsByCJ.DungeonsXL;
+import com.chujian.dungeonsByCJ.api.dungeon.Dungeon;
+import com.chujian.dungeonsByCJ.api.world.ResourceWorld;
+import com.chujian.dungeonsByCJ.config.DMessage;
+import com.chujian.dungeonsByCJ.global.GlobalProtection;
+import com.chujian.dungeonsByCJ.global.JoinSign;
+import com.chujian.dungeonsByCJ.player.DPermission;
+import com.chujian.dungeonsByCJ.util.commons.chat.MessageUtil;
+import com.chujian.dungeonsByCJ.world.DResourceWorld;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
+
+/**
+ * @author Daniel Saukel
+ */
+public class RenameCommand extends DCommand {
+
+    public RenameCommand(DungeonsXL plugin) {
+        super(plugin);
+        setCommand("rename");
+        setMinArgs(2);
+        setMaxArgs(2);
+        setHelp(DMessage.CMD_RENAME_HELP.getMessage());
+        setPermission(DPermission.RENAME.getNode());
+        setPlayerCommand(true);
+        setConsoleCommand(true);
+    }
+
+    @Override
+    public void onExecute(String[] args, CommandSender sender) {
+        DResourceWorld resource = (DResourceWorld) plugin.getMapRegistry().get(args[1]);
+        if (resource == null) {
+            MessageUtil.sendMessage(sender, DMessage.ERROR_NO_SUCH_MAP.getMessage(args[1]));
+            return;
+        }
+
+        Dungeon sfd = resource.getSingleFloorDungeon();
+        resource.setName(args[2]);
+        resource.getFolder().renameTo(new File(DungeonsXL.MAPS, args[2]));
+        resource.getSignData().updateFile(resource);
+
+        if (resource.getEditWorld() != null) {
+            resource.getEditWorld().delete(true);
+        }
+
+        for (Dungeon dungeon : plugin.getDungeonRegistry()) {
+            if (!dungeon.isMultiFloor()) {
+                continue;
+            }
+            DungeonConfig dConfig = ((DDungeon) dungeon).getConfig();
+            FileConfiguration config = dConfig.getConfig();
+            File file = dConfig.getFile();
+
+            if (dConfig.getStartFloor() == resource) {
+                config.set("startFloor", args[2]);
+            }
+
+            if (dConfig.getEndFloor() == resource) {
+                config.set("endFloor", args[2]);
+            }
+
+            List<String> list = config.getStringList("floors");
+            int i = 0;
+            for (ResourceWorld floor : dConfig.getFloors()) {
+                if (floor == resource) {
+                    list.set(i, args[2]);
+                }
+                i++;
+            }
+            config.set("floors", list);
+
+            try {
+                config.save(file);
+            } catch (IOException ex) {
+            }
+        }
+        sfd.setName(args[2]);
+        plugin.getDungeonRegistry().removeKey(args[1]);
+        plugin.getDungeonRegistry().add(args[2], sfd);
+        plugin.getMapRegistry().removeKey(args[1]);
+        plugin.getMapRegistry().add(args[2], resource);
+
+        boolean changed = false;
+        for (GlobalProtection protection : plugin.getGlobalProtectionCache().getProtections().toArray(new GlobalProtection[]{})) {
+            if (!(protection instanceof JoinSign)) {
+                continue;
+            }
+            Dungeon dungeon = ((JoinSign) protection).getDungeon();
+            if (dungeon == null) {
+                protection.delete();
+                continue;
+            }
+            if (dungeon.getName().equals(args[1])) {
+                dungeon.setName(args[2]);
+                changed = true;
+            }
+        }
+
+        if (changed) {
+            plugin.getGlobalProtectionCache().saveAll();
+        }
+
+        MessageUtil.sendMessage(sender, DMessage.CMD_RENAME_SUCCESS.getMessage(args[1], args[2]));
+    }
+
+}

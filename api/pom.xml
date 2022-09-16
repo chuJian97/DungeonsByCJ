@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>de.erethon.dungeonsxl</groupId>
-    <artifactId>dungeonsxl-api</artifactId>
+    <groupId>com.chujian.dungeonsByCJ</groupId>
+    <artifactId>dungeonsByCJ-api</artifactId>
     <version>0.18-PRE</version>
     <packaging>jar</packaging>
     <parent>
-        <groupId>de.erethon.dungeonsxl</groupId>
-        <artifactId>dungeonsxl-parent</artifactId>
+        <groupId>com.chujian.dungeonsByCJ</groupId>
+        <artifactId>dungeonsByCJ-parent</artifactId>
         <version>0.18-PRE</version>
     </parent>
     <build>
@@ -45,7 +45,7 @@
                             <relocations>	
                                 <relocation>
                                     <pattern>de.erethon.commons</pattern>	
-                                    <shadedPattern>de.erethon.dungeonsxl.util.commons</shadedPattern>	
+                                    <shadedPattern>com.chujian.dungeonsByCJ.util.commons</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>

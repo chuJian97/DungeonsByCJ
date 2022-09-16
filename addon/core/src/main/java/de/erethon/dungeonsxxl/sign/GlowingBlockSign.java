@@ -5,13 +5,13 @@
  */
 package de.erethon.dungeonsxxl.sign;
 
-import de.erethon.dungeonsxl.api.DungeonsAPI;
-import de.erethon.dungeonsxl.api.sign.Rocker;
-import de.erethon.dungeonsxl.api.world.InstanceWorld;
-import de.erethon.dungeonsxl.player.DPermission;
-import de.erethon.dungeonsxl.util.commons.misc.BlockUtil;
-import de.erethon.dungeonsxl.util.commons.misc.EnumUtil;
-import de.erethon.dungeonsxl.world.DGameWorld;
+import com.chujian.dungeonsByCJ.api.DungeonsAPI;
+import com.chujian.dungeonsByCJ.api.sign.Rocker;
+import com.chujian.dungeonsByCJ.api.world.InstanceWorld;
+import com.chujian.dungeonsByCJ.player.DPermission;
+import com.chujian.dungeonsByCJ.util.commons.misc.BlockUtil;
+import com.chujian.dungeonsByCJ.util.commons.misc.EnumUtil;
+import com.chujian.dungeonsByCJ.world.DGameWorld;
 import de.erethon.dungeonsxxl.DungeonsXXL;
 import de.erethon.dungeonsxxl.world.block.GlowingBlock;
 import org.bukkit.ChatColor;

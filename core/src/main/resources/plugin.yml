@@ -1,5 +1,5 @@
 name: ${project.parent.name}
-main: de.erethon.dungeonsxl.DungeonsXL
+main: com.chujian.dungeonsByCJ.DungeonsXL
 version: ${project.parent.version}${buildNo}
 authors: [Frank Baumann, Milan Albrecht, Tobias Schmitz, Daniel Saukel]
 description: ${project.parent.description}

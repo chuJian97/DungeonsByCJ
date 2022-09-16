@@ -5,16 +5,16 @@
  */
 package de.erethon.dungeonsxxl;
 
-import de.erethon.dungeonsxl.DungeonsXL;
-import de.erethon.dungeonsxl.api.DungeonModule;
-import de.erethon.dungeonsxl.api.Requirement;
-import de.erethon.dungeonsxl.api.Reward;
-import de.erethon.dungeonsxl.api.dungeon.GameRule;
-import de.erethon.dungeonsxl.api.sign.DungeonSign;
-import de.erethon.dungeonsxl.util.commons.compatibility.Internals;
-import de.erethon.dungeonsxl.util.commons.javaplugin.DREPlugin;
-import de.erethon.dungeonsxl.util.commons.javaplugin.DREPluginSettings;
-import de.erethon.dungeonsxl.util.commons.misc.Registry;
+import com.chujian.dungeonsByCJ.DungeonsXL;
+import com.chujian.dungeonsByCJ.api.DungeonModule;
+import com.chujian.dungeonsByCJ.api.Requirement;
+import com.chujian.dungeonsByCJ.api.Reward;
+import com.chujian.dungeonsByCJ.api.dungeon.GameRule;
+import com.chujian.dungeonsByCJ.api.sign.DungeonSign;
+import com.chujian.dungeonsByCJ.util.commons.compatibility.Internals;
+import com.chujian.dungeonsByCJ.util.commons.javaplugin.DREPlugin;
+import com.chujian.dungeonsByCJ.util.commons.javaplugin.DREPluginSettings;
+import com.chujian.dungeonsByCJ.util.commons.misc.Registry;
 import de.erethon.dungeonsxxl.requirement.*;
 import de.erethon.dungeonsxxl.sign.*;
 import de.erethon.dungeonsxxl.util.GlowUtil;
@@ -51,9 +51,9 @@ public class DungeonsXXL extends DREPlugin implements DungeonModule {
     }
 
     /**
-     * Returns the current {@link de.erethon.dungeonsxl.DungeonsXL} singleton.
+     * Returns the current {@link com.chujian.dungeonsByCJ.DungeonsXL} singleton.
      *
-     * @return the current {@link de.erethon.dungeonsxl.DungeonsXL} singleton
+     * @return the current {@link com.chujian.dungeonsByCJ.DungeonsXL} singleton
      */
     public DungeonsXL getDXL() {
         return dxl;

@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>de.erethon.dungeonsxl</groupId>
-    <artifactId>dungeonsxl-parent</artifactId>
+    <groupId>com.chujian.dungeonsByCJ</groupId>
+    <artifactId>dungeonsByCJ-parent</artifactId>
     <version>0.18-PRE</version>
     <packaging>pom</packaging>
-    <name>DungeonsXL</name>
-    <url>https://dre2n.github.io</url>
-    <description>Create custom dungeons and adventure maps with ease!</description>
+    <name>DungeonsByCJ</name>
+    <url>/</url>
+    <description>轻松创建自定义副本和冒险地图！</description>
     <modules>
         <module>adapter</module>
         <module>api</module>

@@ -5,7 +5,7 @@
  */
 package de.erethon.dungeonsxxl.world.block;
 
-import de.erethon.dungeonsxl.world.block.GameBlock;
+import com.chujian.dungeonsByCJ.world.block.GameBlock;
 import de.erethon.dungeonsxxl.DungeonsXXL;
 import de.erethon.dungeonsxxl.util.GlowUtil;
 import org.bukkit.ChatColor;

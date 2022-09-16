@@ -5,9 +5,9 @@
  */
 package de.erethon.dungeonsxxl.requirement;
 
-import de.erethon.dungeonsxl.api.DungeonsAPI;
-import de.erethon.dungeonsxl.api.Requirement;
-import de.erethon.dungeonsxl.config.DMessage;
+import com.chujian.dungeonsByCJ.api.DungeonsAPI;
+import com.chujian.dungeonsByCJ.api.Requirement;
+import com.chujian.dungeonsByCJ.config.DMessage;
 import java.util.List;
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
