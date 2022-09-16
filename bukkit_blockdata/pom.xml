@@ -2,12 +2,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.chujian.dungeonsByCJ</groupId>
     <artifactId>dungeonsByCJ-bukkit_blockdata</artifactId>
-    <version>0.18-PRE</version>
+    <version>0.1-DEV</version>
     <packaging>jar</packaging>
     <parent>
         <groupId>com.chujian.dungeonsByCJ</groupId>
         <artifactId>dungeonsByCJ-parent</artifactId>
-        <version>0.18-PRE</version>
+        <version>0.1-DEV</version>
     </parent>
     <dependencies>
         <dependency>

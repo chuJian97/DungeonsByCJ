@@ -1,14 +1,13 @@
 name: ${project.parent.name}
 main: com.chujian.dungeonsByCJ.DungeonsXL
 version: ${project.parent.version}${buildNo}
-authors: [Frank Baumann, Milan Albrecht, Tobias Schmitz, Daniel Saukel]
+authors: [Chujian]
 description: ${project.parent.description}
 website: ${project.parent.url}
 depend: [ItemsXL]
 softdepend: [CommandsXL, ItemsXL, Vault, Citizens, CustomMobs, InsaneMobs, MythicMobs, HolographicDisplays, LWC, PlaceholderAPI, Parties]
 commands:
   dungeonsxl:
-    description: Reference command for DungeonsXL.
+    description: DungeonsByCJ 的参考命令。
     aliases: [dcj,dungeon]
-#    aliases: [dbcj]
 api-version: 1.13
