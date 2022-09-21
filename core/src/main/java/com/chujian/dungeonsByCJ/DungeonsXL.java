@@ -211,7 +211,8 @@ public class DungeonsXL extends DREPlugin implements DungeonsAPI {
                 .metrics(false)
                 .spigotMCResourceId(9488)
                 .bStatsResourceId(1039)
-                .versionComparator(VersionComparator.EQUAL)
+//                The plugin is up to date
+//                .versionComparator(VersionComparator.EQUAL)
                 .build();
     }
 

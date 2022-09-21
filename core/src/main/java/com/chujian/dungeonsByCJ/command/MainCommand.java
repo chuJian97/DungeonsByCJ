@@ -59,15 +59,15 @@ public class MainCommand extends DCommand {
             itemsxl = plugins.getPlugin("ItemsXL").getDescription().getVersion();
         }
 
-        MessageUtil.sendCenteredMessage(sender, "&4" + D[0] + "&f" + B[0] + C[0] + J[0]);
-        MessageUtil.sendCenteredMessage(sender, "&4" + D[1] + "&f" + B[1] + C[1] + J[1]);
-        MessageUtil.sendCenteredMessage(sender, "&4" + D[2] + "&f" + B[2] + C[2] + J[2]);
-        MessageUtil.sendCenteredMessage(sender, "&4" + D[3] + "&f" + B[3] + C[3] + J[3]);
-        MessageUtil.sendCenteredMessage(sender, "&4" + D[4] + "&f" + B[4] + C[4] + J[4]);
-//        MessageUtil.sendCenteredMessage(sender, "&4" + D[1] + "&f" + X[1] + L[1]);
-//        MessageUtil.sendCenteredMessage(sender, "&4" + D[2] + "&f" + X[2] + L[2]);
-//        MessageUtil.sendCenteredMessage(sender, "&4" + D[3] + "&f" + X[3] + L[3]);
-//        MessageUtil.sendCenteredMessage(sender, "&4" + D[4] + "&f" + X[4] + L[4]);
+//        MessageUtil.sendCenteredMessage(sender, "&4" + D[0] + "&f" + B[0] + C[0] + J[0]);
+//        MessageUtil.sendCenteredMessage(sender, "&4" + D[1] + "&f" + B[1] + C[1] + J[1]);
+//        MessageUtil.sendCenteredMessage(sender, "&4" + D[2] + "&f" + B[2] + C[2] + J[2]);
+//        MessageUtil.sendCenteredMessage(sender, "&4" + D[3] + "&f" + B[3] + C[3] + J[3]);
+//        MessageUtil.sendCenteredMessage(sender, "&4" + D[4] + "&f" + B[4] + C[4] + J[4]);
+//        MessageUtil.sendCenteredMessage(sender, "&4" + D[1] + "&f" + C[1] + J[1]);
+//        MessageUtil.sendCenteredMessage(sender, "&4" + D[2] + "&f" + C[2] + J[2]);
+//        MessageUtil.sendCenteredMessage(sender, "&4" + D[3] + "&f" + C[3] + J[3]);
+//        MessageUtil.sendCenteredMessage(sender, "&4" + D[4] + "&f" + C[4] + J[4]);
 //        MessageUtil.sendCenteredMessage(sender, "&b&l###### " + DMessage.CMD_MAIN_WELCOME.getMessage() + "&7 v" + plugin.getDescription().getVersion() + " &b&l######");
 //        MessageUtil.sendCenteredMessage(sender, "&b&l###### 欢迎使用鱼乐附属副本插件 DungeonsByCJ V0.1-DEV ######");
         MessageUtil.sendCenteredMessage(sender, DMessage.CMD_MAIN_LOADED.getMessage(String.valueOf(maps), String.valueOf(dungeons), String.valueOf(loaded), String.valueOf(players)));

@@ -56,9 +56,9 @@ public class HelpCommand extends DCommand {
         int min = 0;
         for (DRECommand dCommand : dCommandList) {
             send++;
-            if (send >= page * 5 - 4 && send <= page * 5) {
-                min = page * 5 - 4;
-                max = page * 5;
+            if (send >= page * 10 - 9 && send <= page * 10) {
+                min = page * 10 - 9;
+                max = page * 10;
                 toSend.add(dCommand);
             }
         }
